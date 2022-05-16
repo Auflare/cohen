@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cohen Coombs">
+    <meta name="description" content="Dedicated web graphic/illustration, designer and developer with over 5 years in experience.">
+    <meta name="keywords" content="Cohen, Coombs, Cohen Coombs, CohenCoombs, cohencoombs, cohen, coombs, cohen coombs, website, developer, freelance, website freelancer, looking for website, website design, create website, designer, graphic, design, make website, pages, page, webpage">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Cohen - My Projects</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+  </head>
+  <body>
+    <nav>
+      <a href="/"><img src="../assets/logo.png" alt="logo"></a>
+      <ul>
+        <li><a href="/#about-me">About</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li onclick="contact()">Contact</li>
+      </ul>
+    </nav>
+    <div style="background-image: url(../assets/background.png); background-position: 0%; background-size: cover; background-repeat: no-repeat; height: 60vh !important; animation: unset !important;" class="banner">
+      <h1 id="projects-banner" style="position: absolute; top: 20%; left: 50%; transform: translate(-50%, -20%); ">My Projects</h1>
+    </div>
+    <div class="content">
+      <div class="section">
+        <h1>Featured Projects</h1>
+        <p style="padding-bottom: 0.4rem; text-transform: uppercase; color: #999; border-bottom: 1px solid #222">Public projects from 2021 - 2022</p>
+        <div class="projects"></div>
+      </div>
+      <div class="section-end"></div>
+    </div>
+    <script>
+      var skills = [
+        {
+          name: "Clustoro",
+          url: "//www.clustoro.com",
+          display_url: "www.clustoro.com",
+          description: "Clustoro is a message & media based social media platform. Users can freely communicate with others, access useful settings, moderation & utility and create versatile workspaces."
+        },
+        {
+          name: "Flaredocs",
+          url: "//www.flaredocs.co",
+          display_url: "www.flaredocs.co",
+          description: "Flaredocs, a free, fast and secure live-time word editor. Documents save automatically with many productive features to assist with writing."
+        },
+        {
+          name: "Auflare Intelligence",
+          icon: "auflare",
+          url: "//www.auflare.co",
+          display_url: "www.auflare.co",
+          description: "Auflare Intelligence is an Artificial Intelligence capable of understanding human intent, in order to provide concise information sourced from the internet."
+        },
+        {
+          name: "Remember Pi?",
+          icon: "pi",
+          url: "pi.html",
+          display_url: "projects/pi",
+          description: "This simple game involves recalling digits from Pi. It was built in order to improve the accuracy of storing and recalling information."
+        },
+        {
+          name: "Physiognomy",
+          icon: "ai",
+          url: "",
+          display_url: "",
+          description: "Physiognomy is the practice of analyzing a person's facial features or expressions. This project uses Artificial Intelligence to recognize specific people within a photograph."
+        },
+        {
+          name: "Music Visualizer",
+          icon: "visualizer",
+          url: "visualizer/",
+          display_url: "projects/visualizer",
+          description: "A music visualizer which analyzes the change of frequency throughout a song, creating a visual representation on a 3D sphere."
+        },
+        {
+          name: "NFT Generator",
+          icon: "nft",
+          url: "nft/",
+          display_url: "projects/nft",
+          description: "NFT Generator is a tool which generates algorithmic NFTs based on Artificial Intelligence."
+        },
+        {
+          name: "Defency",
+          icon: "defency",
+          url: "",
+          display_url: "",
+          description: "Defency is a web-based app which specifically connects South Australian lawyers in one place."
+        },
+        {
+          name: "Teleprompter",
+          icon: "reader",
+          url: "reader/",
+          display_url: "projects/reader",
+          description: "A modern, lightweight and minimalist Teleprompter. Sound like a professional by reading at an attractive speed."
+        },
+        {
+          name: "InquiriesAi",
+          icon: "inquiries",
+          url: "",
+          display_url: "",
+          description: "InquiriesAi is a sublime integration which helps with customer management. InquiriesAi uses Artificial Intelligence to engage with a customer and recommend the best service available."
+        },
+      ]
+      skills.forEach(skill => {
+          var item = document.createElement('div')
+          item.className = 'project'
+          item.innerHTML = `<img src="../assets/icons/${skill.icon || skill.name.toLocaleLowerCase()}.png" alt="${skill.name}">
+                <h2>${skill.name}</h2>
+                <a target="_blank" rel="noopener noreferrer" href="${skill.url}">${skill.display_url || "<span style='color: #888; font-size: 0.9rem; cursor: not-allowed'>Link Redacted</span>"}</a>
+                <p>${skill.description} </p>`
+          document.getElementsByClassName('projects')[0].appendChild(item)
+      })
+    </script>
+    <script src="../m91c10.js"></script>
+  </body>
+</html>
