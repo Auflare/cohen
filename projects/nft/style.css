@@ -1,0 +1,30 @@
+body {
+    background: #fff;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+.canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20rem;
+    height: 20rem;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.canvas img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.canvas .message {
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0.5;
+    font-size: 1rem; 
+    position: absolute; 
+    bottom: 0.5rem; 
+    right: 0.8rem;
+}
