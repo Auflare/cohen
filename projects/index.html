@@ -6,32 +6,23 @@
     <meta name="author" content="Cohen Coombs">
     <meta name="description" content="Dedicated web graphic/illustration, designer and developer with over 5 years in experience.">
     <meta name="keywords" content="Cohen, Coombs, Cohen Coombs, CohenCoombs, cohencoombs, cohen, coombs, cohen coombs, website, developer, freelance, website freelancer, looking for website, website design, create website, designer, graphic, design, make website, pages, page, webpage">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Cohen - My Projects</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="shortcut icon" href="../assets/icons/logo.png" type="image/x-icon">
   </head>
   <body>
-    <nav>
-      <a href="/"><img src="../assets/logo.png" alt="logo"></a>
-      <ul>
-        <li><a href="/#about-me">About</a></li>
-        <li><a href="/projects/">Projects</a></li>
-        <li onclick="contact()">Contact</li>
-      </ul>
-    </nav>
-    <div style="background-image: url(../assets/background.png); background-position: 0%; background-size: cover; background-repeat: no-repeat; height: 60vh !important; animation: unset !important;" class="banner">
-      <h1 id="projects-banner" style="position: absolute; top: 20%; left: 50%; transform: translate(-50%, -20%); ">My Projects</h1>
+    <script>0</script>
+    <nav></nav>
+    <div class="project-banner">
+        <h1 class="project-title">Projects</h1>
     </div>
-    <div class="content">
-      <div class="section">
-        <h1>Featured Projects</h1>
-        <p style="padding-bottom: 0.4rem; text-transform: uppercase; color: #999; border-bottom: 1px solid #222">Public projects from 2021 - 2022</p>
-        <div class="projects"></div>
-      </div>
-      <div class="section-end"></div>
-    </div>
+    <section>
+      <h1>Featured Projects</h1>
+      <p style="margin: -0.5rem 0 2rem 0; border: 0" class="subtitle">Projects of 2021 - 2022</p>
+      <div class="projects"></div>
+    </section>
+    <footer></footer>
     <script>
       var skills = [
         {
@@ -75,13 +66,6 @@
           description: "A music visualizer which analyzes the change of frequency throughout a song, creating a visual representation on a 3D sphere."
         },
         {
-          name: "NFT Generator",
-          icon: "nft",
-          url: "nft/",
-          display_url: "projects/nft",
-          description: "NFT Generator is a tool which generates algorithmic NFTs based on Artificial Intelligence."
-        },
-        {
           name: "Defency",
           icon: "defency",
           url: "",
@@ -113,6 +97,6 @@
           document.getElementsByClassName('projects')[0].appendChild(item)
       })
     </script>
-    <script src="../m91c10.js"></script>
+    <script src="../assets/main.js"></script>
   </body>
 </html>

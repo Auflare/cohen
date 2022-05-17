@@ -27,12 +27,6 @@ a {
   text-decoration: none;
 }
 
-a:hover,
-a:focus,
-a:active {
-  text-decoration: underline;
-}
-
 kbd {
   display: inline;
   padding: 0.2rem 0.5rem;
@@ -364,6 +358,7 @@ textarea:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
+  transition: 0.4s;
 }
 
 .menu-popup {
@@ -379,6 +374,7 @@ textarea:focus {
   padding: 1.5rem 1.2rem 1rem 1.2rem;
   border: 1px solid var(--shade-2);
   z-index: 101;
+  transition: 0.4s;
 }
 
 .menu-popup h2 {

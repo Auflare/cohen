@@ -1,13 +1,11 @@
 var pause = false;
 var destructure
-    
 function reset() {
     pause = true
     document.getElementById('read-button').removeAttribute('hidden')
     document.getElementById('read-now').innerHTML = null;
     document.getElementById('read-ahead').innerHTML = null;
 }
-
 function getWordTime(content) {
     if (content.includes(".")) return 1000
     if (content.includes(",")) return 800
@@ -32,6 +30,5 @@ async function read(content) {
         if (pause == true) return
         document.getElementById('read-now').innerHTML = `${destructure[i]}`;
         await new Promise(resolve => {setTimeout(resolve, getWordTime(destructure[i]))});
-    };
-    reset()
+    }; reset()
 }
