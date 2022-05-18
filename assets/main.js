@@ -55,13 +55,13 @@ const Menu = {
 
 window.addEventListener('scroll', () => {
   let card = document.querySelector('.card')
-  if (window.scrollY > 10) {
+  if (window.scrollY >= 10) {
       if (window.innerWidth <= 1024) {
           card.style.transition = '0.1s';
-          card.style.transform = `translate(0%, -${window.scrollY-50}px)`
+          card.style.transform = `translate(0%, -${window.scrollY-50/0.8}px)`
       } else {
           card.style.transition = '0.1s';
-          card.style.transform = `translate(-50%, -${window.scrollY-50}px)`
+          card.style.transform = `translate(-50%, -${window.scrollY-50/0.8}px)`
       }
   }
 })

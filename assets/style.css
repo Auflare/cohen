@@ -199,8 +199,17 @@ section .container {
 }
 
 .skills {
-  margin-top: -10rem;
-  padding-top: 15rem;
+  margin-top: -5rem;
+}
+
+.slanted {
+  z-index: -1;
+  position: relative;
+  width: 100%;
+  height: 10rem;
+  transform: skewY(-5deg);
+  background: var(--section);
+  box-shadow: var(--shade-3) 1px 1px 5rem;
 }
 
 .skills,
@@ -410,16 +419,17 @@ footer ul h2 {
 
 @media screen and (max-width: 900px) {
   .tags {
-    background: transparent;
     padding: 0;
-    backdrop-filter: unset;
     margin-top: 1rem;
+    background: transparent;
+    backdrop-filter: unset !important;
+    -webkit-backdrop-filter: unset !important;
   }
 
   .tags .tag {
     background: transparent;
-    backdrop-filter: unset;
-    -webkit-backdrop-filter: unset;
+    backdrop-filter: unset !important;
+    -webkit-backdrop-filter: unset !important;
     padding: 0;
     margin: 0 0 0.5rem 0 !important;
     display: block;
