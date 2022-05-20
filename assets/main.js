@@ -3,6 +3,7 @@
  * Cohen Coombs 2022 (c) All Rights Reserved
  * Written by Cohen Coombs, 2022
 ==================================================*/
+const currentYear = new Date().getFullYear()
 
 function contact() {
   Menu.open({
@@ -54,16 +55,12 @@ const Menu = {
 }
 
 window.addEventListener('scroll', () => {
-  let card = document.querySelector('.card')
-  if (window.scrollY >= 10) {
-      if (window.innerWidth <= 1024) {
-          card.style.transition = '0.1s';
-          card.style.transform = `translate(0%, -${window.scrollY-50/0.8}px)`
-      } else {
-          card.style.transition = '0.1s';
-          card.style.transform = `translate(-50%, -${window.scrollY-50/0.8}px)`
-      }
-  }
+    let card = document.querySelector('.card')
+    card.style.transition = '0.1s';
+    if (window.scrollY >= 10) {
+        if (window.innerWidth <= 1024) card.style.transform = `translate(0%, -${window.scrollY-50/0.8}px)`
+        else card.style.transform = `translate(-50%, -${window.scrollY-50/0.8}px)`
+    }
 })
 
 document.querySelector('nav').innerHTML = `
@@ -74,13 +71,18 @@ document.querySelector('nav').innerHTML = `
 <li onclick="contact()"><a href="#">Contact</a></li>
 </ul>`
 document.querySelector('footer').innerHTML = `
+<div class="contact">
+    <h2>Get In Touch</h2><br>
+    Send me a message, inquiry or collaboration - <a style="font-size: 1.1rem; font-weight: 600" href="mailto:cohencoombs@outlook.com"> cohencoombs@outlook.com </a>
+</div>
+<div class="container">
 <ul>
   <h2 style="font-weight: 600">Resources</h2>
-  <li><a href="projects/">Other Projects</a></li>
+  <li><a href="projects/">Projects</a></li>
   <li><span onclick="contact()">Contact</span></li>
 </ul>
-<p style="color: var(--subtext)">© Cohen Coombs 2022. All Rights Reserved</p>
-<br><br>`
+<p style="color: var(--subtext)">© Cohen Coombs ${currentYear}. All Rights Reserved</p>
+<br><br></div>`
 
 var inc = 0.1;
 var scl = 30;
@@ -162,7 +164,6 @@ function Particle() {
       stroke(this.colour);
       strokeWeight(0.8);
       line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
-      // point(this.pos.x, this.pos.y);
       this.updatePrev();
   };
 
